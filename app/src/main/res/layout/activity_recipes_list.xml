@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFF"
+    tools:context=".RecipesList">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="40dp"
+        android:background="@drawable/header_recipes_rounded">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/arrow_back_white"/>
+            <TextView
+                android:paddingTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/monsterrat_bold"
+                android:paddingBottom="20dp"
+                android:text="  Recipes"
+                android:textColor="@color/white"
+                android:textSize="24dp" />
+        </LinearLayout>
+
+        <SearchView
+            android:id="@+id/search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:queryHint="Search..."
+            android:queryBackground="@color/white"
+            android:iconifiedByDefault="false"
+            android:inputType="textPersonName"
+            android:textColorHint="#666"
+            android:background="@drawable/edit_text_rounded"/>
+        <RelativeLayout
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ToggleButton
+                android:id="@+id/balanced_button"
+                android:layout_width="wrap_content"
+                android:layout_height="28dp"
+                android:background="@drawable/toggle_button"
+                android:fontFamily="@font/montserrat_regular"
+                android:textOn="Balanced"
+                android:textAllCaps="false"
+                android:textOff="Balanced"
+                android:onClick="onClick"
+                android:layout_alignParentLeft="true"
+                android:textColor="@drawable/toggle_button_text"
+                android:textSize="12dp" />
+            <ToggleButton
+                android:id="@+id/high_fiber_button"
+                android:layout_width="wrap_content"
+                android:layout_height="28dp"
+                android:textAllCaps="false"
+                android:background="@drawable/toggle_button"
+                android:fontFamily="@font/montserrat_regular"
+                android:textOn="High-Fiber"
+                android:textOff="High-Fiber"
+                android:onClick="onClick"
+                android:layout_centerHorizontal="true"
+                android:textColor="@drawable/toggle_button_text"
+                android:textSize="12dp" />
+            <ToggleButton
+                android:id="@+id/high_protein_button"
+                android:layout_width="wrap_content"
+                android:layout_height="28dp"
+                android:textAllCaps="false"
+                android:background="@drawable/toggle_button"
+                android:fontFamily="@font/montserrat_regular"
+                android:textOn="High-Protein"
+                android:textOff="High-Protein"
+                android:onClick="onClick"
+                android:layout_alignParentRight="true"
+                android:textColor="@drawable/toggle_button_text"
+                android:textSize="12dp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/recycleView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>
